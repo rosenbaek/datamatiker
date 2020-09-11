@@ -7,6 +7,7 @@ for (int x = 0; x < 21; x++) {
 
 // 4.b
 for (int x = 0; x < 21; x++) {
+  // even numbers using modulus
   if (x % 2 == 0) {
     System.out.println(x);
   }

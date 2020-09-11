@@ -17,8 +17,6 @@ void setup() {
 }
 
 
-
-
 void draw() {
   int w = width/2;
   int h = height/2;
@@ -36,6 +34,7 @@ void draw() {
   }
 
   // FLOW - TRAFFIC LIGHT LOOP
+  //red light
   if (x < 4)
   {
     fill(greenOff);
@@ -102,11 +101,10 @@ void draw() {
     ellipseMode(CENTER);
     ellipse(w, (h), 180, 180);
   }     
-
-
   x++;
 }
 
+/*
 void keyPressed() {
   if (keyCode == ENTER) {
     lightGreen = !lightGreen;
@@ -117,6 +115,4 @@ void keyPressed() {
     lightYellow = !lightYellow;
   }
 }
-
-void green() {
-}
+*/

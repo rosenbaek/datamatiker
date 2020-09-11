@@ -1,14 +1,18 @@
-int input = abs(-30);
+int input = -48;
 int counter = input/2;
+int inputAbs = abs(input);
 
-
-while (input >= 0 ) {
-  println(input);
-  if (input == 6) {
+while (inputAbs >= 0 ) 
+  {
+  if (inputAbs == 6) {
     println("six");
   }
-  if (input == counter) {
+  if (inputAbs == counter) 
+  {
     println("Half");
-  } 
-  input--;
+  } else 
+  {
+    println(inputAbs);
+  }
+  inputAbs--;
 }
