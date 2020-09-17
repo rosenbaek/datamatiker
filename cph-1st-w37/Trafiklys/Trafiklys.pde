@@ -18,23 +18,22 @@ void setup() {
 
 
 void draw() {
-  int w = width/2;
-  int h = height/2;
-
-  println(w);
-
   background(background);
-
   fill(fill);
   rectMode(CENTER);
-  rect(w, h, 200, 600, 15);
-  if (x > 18)
-  {
+  if (x > 18) {
     x = 0;
   }
+  
+  trafficLoop();
+}
 
-  // FLOW - TRAFFIC LIGHT LOOP
-  //red light
+// FLOW - TRAFFIC LIGHT LOOP
+//red light
+void trafficLoop() {
+  int w = width/2;
+  int h = height/2;
+  rect(w, h, 200, 600, 15);
   if (x < 4)
   {
     fill(greenOff);
@@ -104,15 +103,16 @@ void draw() {
   x++;
 }
 
+
 /*
 void keyPressed() {
-  if (keyCode == ENTER) {
-    lightGreen = !lightGreen;
-    lightYellow = !lightYellow;
-  } else if (key == 'r') {
-  } else if (key == 'g') {
-  } else if (key == 'y') {
-    lightYellow = !lightYellow;
-  }
-}
-*/
+ if (keyCode == ENTER) {
+ lightGreen = !lightGreen;
+ lightYellow = !lightYellow;
+ } else if (key == 'r') {
+ } else if (key == 'g') {
+ } else if (key == 'y') {
+ lightYellow = !lightYellow;
+ }
+ }
+ */
