@@ -20,13 +20,16 @@ void drawFields()
     {
       if (x % 2 == 0 && y % 2 != 0) 
       {
-        fill(250);
+        board[x][y] = 1;
+        fill(50); // sort
       } else if (x % 2 != 0 && y % 2 == 0) 
       {
-        fill(250);
+        board[x][y] = 1;
+        fill(50); // sort
       } else 
       {
-        fill(50);
+        board[x][y] = 0;
+        fill(250); // Hvid
       }
       rect(x * sideLength, y * sideLength, sideLength, sideLength);
     }
