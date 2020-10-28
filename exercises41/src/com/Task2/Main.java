@@ -21,7 +21,7 @@ public class Main {
             totalLamps = totalLamps + headQuarter.getRooms().get(i).getNumberOfLamps();
         }
         //for (Room tmp : rooms){
-        //    totalLamps = rooms.getNumberOfLamps();
+        //    totalLamps = tmp.getNumberOfLamps();
         //}
         System.out.println(totalLamps);
 
