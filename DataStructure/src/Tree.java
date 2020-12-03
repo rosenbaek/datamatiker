@@ -1,6 +1,7 @@
 import com.company.BinaryTree;
 import com.company.DoubleLinkedList;
 import com.company.Node;
+import com.company.Sort;
 
 
 public class Tree {
@@ -11,6 +12,7 @@ public class Tree {
         //System.out.println(bt.countFromRoot());
         System.out.println("Total: " + bt.countSumFromRoot());
         bt.printInOrderFromRoot();
+
     }
     private static BinaryTree createBinaryTree(){
         BinaryTree bt = new BinaryTree();
