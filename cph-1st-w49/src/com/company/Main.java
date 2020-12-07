@@ -17,22 +17,22 @@ public class Main {
         Bog bog2 = new Bog(7777, "Shit", 2020);
         Bibliotek.bibliotek.add(bog);
         Bibliotek.bibliotek.add(bog1);
-        Bibliotek.bibliotek.add(bog1);*/
+        Bibliotek.bibliotek.add(bog1);
 
 
-        /*System.out.println(Bibliotek.tjekBibliotek(bog));
-        Scanner scan = new Scanner(System.in);
+        System.out.println(Bibliotek.tjekBibliotek(bog));*/
+       /* Scanner scan = new Scanner(System.in);
         System.out.println("Skriv aktuel græshøjde");
         String aktuel = scan.nextLine();
-        System.out.println("Skriv aktuel max græshøjde");
+        System.out.println("Skriv max græshøjde");
         String maxHøjde = scan.nextLine();
-        System.out.println("Dage til græsslåning: "+Græs.slåGræs(Float.parseFloat(aktuel),Float.parseFloat(maxHøjde)));*/
-
-        //TegnFirkant.tegnFirkant(-6, "*");
+        System.out.println("Dage til græsslåning: "+Græs.slåGræs(Float.parseFloat(aktuel),Float.parseFloat(maxHøjde)));
+        System.out.printf("%.2f", Græs.slåGræs(Float.parseFloat(aktuel),Float.parseFloat(maxHøjde)));*/
+        TegnFirkant.tegnFirkant(-10, "*");
 
         //Menu.displayMenu();
 
 
-        System.out.println(ProperCase.tekstFormat("test ER godt, er det ikke?"));
+        //System.out.println(ProperCase.tekstFormat("test ER godt, er det ikke?"));
     }
 }
