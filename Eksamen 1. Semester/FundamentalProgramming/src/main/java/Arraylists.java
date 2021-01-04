@@ -6,10 +6,8 @@ public class Arraylists {
 
     //Arraylist er smart fordi du behøver ikke at lave en specifik størrelse inden du putter data ind. Det skal du med et alm array.
     /*First of all Declaring mean:
-
     ClassName obj;
     Simple meaning of instantiate is creating an object from class.
-
     ClassName obj = new ClassName();*/
 
     public static void main(String[] args) {

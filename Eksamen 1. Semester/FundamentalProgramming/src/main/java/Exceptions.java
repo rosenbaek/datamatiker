@@ -7,8 +7,6 @@ public class Exceptions {
     * Hvornår vil man håndtere en fejl i catch og hvornår smider man den videre?*/
     public static void main(String[] args) {
         tryCatchWithFinally();
-
-
         try {
             System.out.println("Import file method with throws: ");
             importFile();
@@ -39,7 +37,6 @@ public class Exceptions {
     public static void importFile() throws FileNotFoundException {
         File file = new File("src/main/java/tmp.txt");
         Scanner sc = new Scanner(file);
-
         while (sc.hasNextLine()){
             System.out.println(sc.nextLine());
         }

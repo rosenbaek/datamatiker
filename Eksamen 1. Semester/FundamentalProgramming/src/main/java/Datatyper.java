@@ -2,14 +2,17 @@ import java.text.DecimalFormat;
 
 public class Datatyper {
     //Strings, Int, Double,
-
+    //Primitive data types - includes byte, short, int, long, float, double, boolean and char.
+    //Non-primitive (Reference types) data types - such as String, Arrays and Classes
+    //A String in Java is actually a non-primitive data type, because it refers to an object. The String object has methods that are used to perform certain operations on strings.
+    //A primitive type starts with a lowercase letter, while non-primitive types starts with an uppercase letter.
 
     //Hvorfor kan man ikke sammenligne 2 Strings med ==?
     public static void main(String[] args) {
         int tal = 1;
         double flereTal = 200.3456;
         String navn = "navn";
-        String navn1 = "navn";
+
         Boolean trueFalse = false;
 
         //Strings

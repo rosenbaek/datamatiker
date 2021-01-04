@@ -1,3 +1,5 @@
+package Database;
+
 /*Hvad er en database, tabeller, felter/kolonner,
 primær nøgler, fremmed-nøgler, et EER-diagram, CRUD, MySql, Workbench*/
 

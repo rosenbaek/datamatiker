@@ -1,24 +1,58 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
+import java.io.FileWriter;
 
 public class Filer {
     public static void main(String[] args) {
+
         try {
-            System.out.println("Import file method with throws: ");
-            importFile();
+            createFile();
+            writeToFile();
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+    }
+
+    public static void importFile(){
+        try {
+            File file = new File("filename.txt");
+            Scanner sc = new Scanner(file);
+
+            while (sc.hasNextLine()){
+                System.out.println(sc.nextLine());
+            }
+
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
     }
 
-    public static void importFile() throws FileNotFoundException {
-        File file = new File("src/main/java/tmp.txt");
-        Scanner sc = new Scanner(file);
-
-        while (sc.hasNextLine()){
-            System.out.println(sc.nextLine());
+    public static void createFile() throws IOException {
+        try {
+            File myObj = new File("filename.txt");
+            if (myObj.createNewFile()) {
+                System.out.println("File created: " + myObj.getName());
+            } else {
+                System.out.println("File already exists.");
+            }
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
         }
     }
 
+    public static void writeToFile() throws IOException {
+        try {
+            FileWriter myWriter = new FileWriter("filename.txt");
+            myWriter.write("Her kan man skrive til en text fil.");
+            myWriter.close();
+            System.out.println("Successfully wrote to the file.");
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+    }
 }

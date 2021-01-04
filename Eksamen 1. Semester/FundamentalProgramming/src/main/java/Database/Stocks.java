@@ -1,3 +1,5 @@
+package Database;
+
 public class Stocks {
     private String name;
     private String symbol;
@@ -46,7 +48,7 @@ public class Stocks {
     @Override
     public String toString()
     {
-        return "Stocks{" +
+        return "Database.Stocks{" +
                 "name='" + name + '\'' +
                 ", symbol='" + symbol + '\'' +
                 ", price=" + price +
