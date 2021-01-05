@@ -1,19 +1,15 @@
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Scanners {
     public static void main(String[] args) {
 
-
-        /*System.out.println("indtast kundens navn: ");
-        String navn = scan.nextLine();*/
-
-
         System.out.println(getInt());
         System.out.println(getDouble());
 
-
-        //System.out.println("Kundens navn: " + navn);
+        importFile();
     }
 
     private static int getInt() {
@@ -21,29 +17,38 @@ public class Scanners {
         int x = 0;
         try {
             System.out.println("indtast integer: ");
-            x = scan.nextInt();
-            return x;
-
+            return scan.nextInt();
         } catch (InputMismatchException e) {
             e.printStackTrace();
             System.out.println("Forkert Datatype");
-            getInt(); //recursion
         }
-        return x;
+        return getInt(); //recursion
     }
+
 
     private static double getDouble() {
         Scanner scan = new Scanner(System.in);
         double x = 0;
         try {
             System.out.println("indtast Double: ");
-            x = scan.nextDouble();
-            return x;
-
+            return scan.nextDouble();
         } catch (InputMismatchException e) {
             e.printStackTrace();
-            getDouble(); // recursion
         }
-        return x;
+        return getDouble(); // recursion
+    }
+
+    public static void importFile(){
+        try {
+            File file = new File("filename.txt");
+            Scanner sc = new Scanner(file);
+
+            while (sc.hasNextLine()){
+                System.out.println(sc.nextLine());
+            }
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 }

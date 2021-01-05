@@ -10,6 +10,7 @@ public class Filer {
         try {
             createFile();
             writeToFile();
+            //deleteFile();
         } catch (IOException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
@@ -53,6 +54,15 @@ public class Filer {
         } catch (IOException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
+        }
+    }
+
+    public static void deleteFile(){
+        File file = new File("filename.txt");
+        if (file.delete()){
+            System.out.println("Deleted the file: " + file.getName());
+        } else {
+            System.out.println("Failed to delete the file.");
         }
     }
 }
